@@ -5,7 +5,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/Features", glue = "com.gemini.generic", tags = "@changeDefaultLayout")
+@CucumberOptions(features = "src/test/resources/Features", glue = "com.gemini.generic")
 public class TestRunner {
 }
 
