@@ -1,0 +1,48 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+group 'org.sample'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'C:\\Users\\sh.bajaj\\IdeaProjects\\mobile-gemjar\\build\\libs'
+    }
+}
+
+buildscript {
+    project.ext {
+        serenityVersion = '2.3.12'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('net.serenity-bdd:serenity-gradle-plugin:' + serenityVersion)
+        classpath('net.serenity-bdd:serenity-single-page-report:' + serenityVersion)
+    }
+}
+
+dependencies {
+    implementation group: 'com.gemini.generic', name: 'mobile-gemjar', version: '1.0-SNAPSHOT-all'
+//    implementation 'com.gemini.generic:mobile-gemjar:1.0-SNAPSHOT-all'
+}
+
+serenity {
+    reports = ["single-page-html"]
+}
+
+test {
+    ignoreFailures = true
+    filter {
+        includeTestsMatching "*.TestRunner"
+    }
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+}
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
