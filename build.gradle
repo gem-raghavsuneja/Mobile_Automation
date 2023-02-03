@@ -2,7 +2,7 @@ defaultTasks 'clean', 'test', 'aggregate'
 
 apply plugin: 'java'
 apply plugin: 'net.serenity-bdd.aggregator'
- 
+    
 group 'org.sample'
 version  '1.0-SNAPSHOT'
         
