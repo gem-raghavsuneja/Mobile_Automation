@@ -6,8 +6,8 @@ apply plugin: 'net.serenity-bdd.aggregator'
 group 'org.sample'
 version  '1.0-SNAPSHOT'
         
-repositories {
-    mavenCentral()
+repositories {    
+          mavenCentral()
     flatDir {
         dirs 'C:\\Users\\ra.suneja\\Downloads\\mobile-gemjar1\\mobile-gemjar\\build\\libs'
     }
