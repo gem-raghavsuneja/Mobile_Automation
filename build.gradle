@@ -24,6 +24,8 @@ buildscript {
         classpath('net.serenity-bdd:serenity-gradle-plugin:' + serenityVersion)
         classpath('net.serenity-bdd:serenity-single-page-report:' + serenityVersion)
     }
+    
+    
 }
 
 dependencies {
