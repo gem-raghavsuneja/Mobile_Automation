@@ -12,7 +12,7 @@ version  '1.0-SNAPSHOT'
 repositories {    
           mavenCentral()
     flatDir {
-        dirs 'C:\\Users\\ra.suneja\\Downloads\\mobile-gemjar1\\mobile-gemjar\\build\\libs'
+        dirs 'C:\Users\raghav.suneja\Downloads\mobile-gemjar1\mobile-gemjar\build\libs'
     }
 }
 
