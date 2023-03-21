@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 //Get some code from a GitHub repository
-                git 'https://github.com/gem-raghavsuneja/Mobile_Automation'
+//                 git 'https://github.com/gem-raghavsuneja/Mobile_Automation'
                 bat './gradlew build'
             }
 
